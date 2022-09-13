@@ -69,4 +69,12 @@ const createElementWithClassAndParent = (newElement, className, id, inHTML, pare
   const speakersHeading = createElementWithClassAndParent('h2','speakers-heading','speakers-heading','main - speaker',speakersHeadingContainer);
   const speakersContainer = createElementWithClassAndParent('div','speakers-container','speakers-container','',speakersSection);
 
-
+  speakers.forEach((i) => {
+    const speakerContainer = createElementWithClassAndParent('div','speaker-container','speaker-container','',speakersContainer);
+    const speakerImage = createElementWithClassAndParent('div','speaker-img','speaker-img','',speakerContainer);
+    speakerImage.style.backgroundImage = `${speakers[speakers.indexOf(i)].pic}`;
+    const speakerName = createElementWithClassAndParent('h5','speaker-name','speaker-name',`${speakers[speakers.indexOf(i)].fullname}`,speakerContainer);
+    const speakerNickname = createElementWithClassAndParent('p','speaker-nickname','speaker-nickname',`${speakers[speakers.indexOf(i)].nickname}`,speakerContainer);
+    const speakerPosition = createElementWithClassAndParent('p','speaker-position','speaker-position',`${speakers[speakers.indexOf(i)].position}`,speakerContainer);
+    const speakerKeynote = createElementWithClassAndParent('p','speaker-keynote','speaker-keynote',`${speakers[speakers.indexOf(i)].keynote}`,speakerContainer);
+  });
