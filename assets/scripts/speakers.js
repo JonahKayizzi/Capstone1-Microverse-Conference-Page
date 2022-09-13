@@ -54,3 +54,19 @@ const speakers = [
     },
 ];
 
+const speakersSection = document.getElementById('featured-speakers');
+
+const createElementWithClassAndParent = (newElement, className, id, inHTML, parent) => {
+    const element = document.createElement(`${newElement}`);
+    element.className = `${className}`;
+    element.id = `${id}`;
+    element.innerHTML = `${inHTML}`;
+    parent.appendChild(element);
+    return element;
+  };
+
+  const speakersHeadingContainer = createElementWithClassAndParent('div', 'speakers-heading-container','speakers-heading-container','',speakersSection);
+  const speakersHeading = createElementWithClassAndParent('h2','speakers-heading','speakers-heading','main - speaker',speakersHeadingContainer);
+  const speakersContainer = createElementWithClassAndParent('div','speakers-container','speakers-container','',speakersSection);
+
+
