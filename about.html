@@ -7,21 +7,21 @@
     <link rel="stylesheet" href="assets/styles/styles.css">
     <link href="http://fonts.cdnfonts.com/css/cocogoose" rel="stylesheet">
 </head>
-<body class="about-body">
-    <header>
-        <nav>
-            <a href="" class="mobile-menu" id="mobile-menu"><img src="assets/img/mobile_menu.png" alt="mobile-menu"></a>
-            <a href="" class="logo"><img src="assets/img/logo.png" alt=""></a>
-            <ul class="menu">
-                <li class="menu-item">Event Introduction</li>
-                <li class="menu-item">program</li>
-                <li class="menu-item">Application for participation</li>
-                <li class="menu-item">sponsor</li>
-                <li class="menu-item">News</li>
-                <li class="menu-item">presentation</li>
-            </ul> 
-            </nav>
-      </header>
+<body class="about-body flex-col">
+    <header class="fnt-l flex-col font-small">
+        <nav class="flex-row">
+        <a href="" class="mobile-menu" id="mobile-menu"><img src="assets/img/mobile_menu.png" alt="mobile-menu"></a>
+        <a href="" class="logo"><img src="assets/img/logo.png" alt=""></a>
+        <ul class="menu flex-row">
+            <li class="menu-item active"><a href="">About</a> </li>
+            <li class="menu-item"><a href="">Program</a> </li>
+            <li class="menu-item"><a href="">Join</a> </li>
+            <li class="menu-item"><a href="">Sponsor</a> </li>
+            <li class="menu-item"><a href="">News</a> </li>
+            <li class="menu-item active summit-item"><a href="">CC Campaign</a> </li>
+        </ul> 
+        </nav>
+    </header>
       <section class="about-banner">
         <p class="about-greeting clr-o font-2 fnt-l flex-col">"Greetings! AIM Experts"</p>
         <h1 class="banner-heading font-3 fnt-c">GLOBAL IFAIMA AVIATION SUMMIT 2022</h1>
@@ -51,30 +51,30 @@
             </div>
         </div>
       </section>
-      <section class="partners-section clr-w">
+      <section class="partners-section clr-w about-partners">
         <div class="partners-heading-container">
             <h4 class="partners-heading fnt-l font-1 marg-0">Partner</h4>
         </div>
         <div class="red-line"></div>
         <div class="partners-container flex-row">
             <div class="partner">
-                <img class="partner-img" src="assets/img/mozilla.png" alt="mozilla">
+                <img class="partner-img invert" src="assets/img/mozilla.png" alt="mozilla">
             </div>
             <div class="partner">
-                <img class="partner-img" src="assets/img/googlekorea.png" alt="google">
+                <img class="partner-img no-invert" src="assets/img/googlekorea.png" alt="google">
             </div>
             <div class="partner">
-                <img class="partner-img" src="assets/img/naver.png" alt="naver">
+                <img class="partner-img invert" src="assets/img/naver.png" alt="naver">
             </div>
             <div class="partner">
-                <img class="partner-img" src="assets/img/kakao.png" alt="kakao">
+                <img class="partner-img no-invert" src="assets/img/kakao.png" alt="kakao">
             </div>
             <div class="partner">
-                <img class="partner-img" src="assets/img/airbnb.png" alt="airbnb">
+                <img class="partner-img invert" src="assets/img/airbnb.png" alt="airbnb">
             </div>
         </div>
     </section>
-      <footer class="flex-row">
+      <footer class="about-footer flex-row">
         <div class="logo-footer">
             <img src="assets/img/logo.png" alt="logo">
         </div>
