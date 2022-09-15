@@ -2,55 +2,49 @@ const speakers = [
     {
         id: 1,
         pic: 'url("assets/img/speaker_01.png")',
-        fullname: 'yohai benkler',
-        nickname: 'Yochai Benkler',
-        position: 'Professor at Harvard Law School',
-        keynote: 'Focusing on a collaborative approach in a networked environment, he created the concept of co-production based on sharing, such as open source software and Wikipedia. (Main book: The Wealth of the Network , Penguin and Leviathan )',
+        fullname: 'Peter Dury',
+        position: 'Sports commentary (Association football)',
+        keynote: 'Peter Drury is a sports commentator who currently works for NBC Sports as the lead main commentator for its Premier League coverage in the United States.',
     },
 
     {
         id: 2,
         pic: 'url("assets/img/speaker_02.png")',
-        fullname: 'Jeon Gil-nam',
-        nickname: 'Kilnam Chon',
-        position: 'Emeritus Professor, Korea Advanced Institute of Science and Technology (KAIST)',
-        keynote: "By developing Asia's first Internet protocol network SDN and leading Korea's first private line Internet connection in 1990, it ushered in the era of the Internet in earnest.",
+        fullname: 'Seema Jaswal',
+        position: 'British television and radio presenter',
+        keynote: "Jaswal hosts the Premier League's worldwide coverage for Premier League Productions which includes flagship shows Kick Off and Fanzone.",
     },
 
     {
         id: 3,
         pic: 'url("assets/img/speaker_03.png")',
-        fullname: 'Noh So-young',
-        nickname: 'Sohyeong Noh',
-        position: 'Art Center Nabi Director, CC Korea Director',
-        keynote: "As the author of <Digital Art Art of Our Time>, he opened 'Art Center Nabi', Korea's first digital art institution in 2000, and is currently serving.",
+        fullname: 'Jim Beglin',
+        position: 'Co-commentator Sky Sports',
+        keynote: "James Martin Beglin is an Irish former professional footballer and current co-commentator for RTÉ, CBS Sports, BT Sport, and Premier League Productions.",
     },
 
     {
         id: 4,
         pic: 'url("assets/img/speaker_04.png")',
-        fullname: 'Julia Leda',
-        nickname: 'Julia Reda',
-        position: 'Head of the Young Pirates of Europe',
-        keynote: "European integration and online youth participation in politics and democracy are major concerns, and a report has been published that will potentially affect the revision of the EU's",
+        fullname: 'Jim Proudfoot',
+        position: 'Experienced Sports Commentator',
+        keynote: "Jim Proudfoot is an English football commentator who has worked on national radio and television since the late 1990s.",
     },
 
     {
         id: 5,
         pic: 'url("assets/img/speaker_05.png")',
-        fullname: 'Layla Trettikov',
-        nickname: 'Lila Tretikov',
-        position: 'Secretary General of the Wikimedia Foundation',
-        keynote: "Layla Tretikov is the general secretary of the Wikimedia Foundation, a non-profit organization that runs Wikipedia. Wikipedia is provided free of charge in 290 languages ​​every month to over 100 million people, nearly half of the world's population.",
+        fullname: 'Jules Breach',
+        position: 'Jules Breach is a British sports broadcaster',
+        keynote: "Breach was born in Brighton, Sussex. She moved with her family to Mauritius until she was 5 at which point she returned to the UK and attended St Mary’s RC Primary School in Portslade, Sussex.",
     },
 
     {
         id: 6,
         pic: 'url("assets/img/speaker_06.png")',
-        fullname: 'Ryan Merkley',
-        nickname: 'Ryan Merkley',
-        position: 'Creative Commons CEO, Former Mozilla Foundation COO',
-        keynote: "He led open source projects at the Mozilla Foundation and joined CC as CEO in 2014. He has been active in open movements such as open government and open source.",
+        fullname: 'Rio Ferdinand',
+        position: 'Former England & Man United Player',
+        keynote: "Rio Gavin Ferdinand OBE is an English former professional footballer who played as a centre-back, and is now a television pundit for BT Sport.",
     },
 ];
 
@@ -84,18 +78,23 @@ const createElementWithClassAndParent = (newElement, className, id, inHTML, pare
       });
   };
 
-  let from = 0;
-  let to = 2;
+  const mobileScreen = window.matchMedia("(max-width: 768px)");
+  if (mobileScreen.matches){
 
-  populateSpeakers(from,to)
+    populateSpeakers(0,2);
 
   const moreClick = document.querySelector('.more-button');
 
   moreClick.addEventListener('click', function(){
-    from = 2;
-    to = 6;
-    populateSpeakers(from,to);
+    populateSpeakers(2,6);
 
     moreButton.style.display = 'none';
   });
+
+}else {
+    populateSpeakers(0,6);
+}
+  
+
+  
 

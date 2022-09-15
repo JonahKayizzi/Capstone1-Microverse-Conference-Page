@@ -12,6 +12,14 @@ a:hover {
     color: #ec5242;
 }
 
+.hdn {
+    display: none;
+}
+
+.blk {
+    display: block;
+}
+
 .fnt-l {
     font-family: 'Lato', Helvetica, sans-serif;
 }
@@ -34,6 +42,10 @@ a:hover {
 
 .font-small {
     font-size: 0.8em;
+}
+
+.font-sm {
+    font-size: 1em;
 }
 
 .font-1 {
@@ -73,15 +85,23 @@ a:hover {
 }
 
 .logo,
-.menu,
 .partners-section,
 .footer,
-.close {
+.upper-menu {
     display: none;
 }
 
-.xxx{
-    display: block;
+.upper-menu {
+    background: #000;
+    width: 100%;
+}
+
+.upper-menu-items {
+    width: 75%;
+    height: 2em;
+    justify-content: flex-end;
+    padding: 0;
+    gap: 1em;
 }
 
 .home-body {
@@ -156,10 +176,10 @@ header,
 }
 
 .summit-logo-container {
-    width: 90%;
+    width: 70%;
     border: solid 2px #e9e9e9;
     background: rgba(255, 255, 255, 0.5);
-    padding: 2em;
+    padding: 3em;
     margin-bottom: 1em;
 }
 
@@ -180,6 +200,23 @@ header,
     background: rgba(255, 255, 255, 0.1);
     margin: 0 1em 1em 1em;
     width: 90%;
+}
+
+.summit-logo-heading {
+    width: 62%;
+}
+
+.logo-description,
+.past-summit-heading,
+.past-summit-note,
+.about-message,
+.banner-heading,
+.past-summit-wrapper {
+    width: 85%;
+}
+
+.about-question {
+    width: 80%;
 }
 
 .prog-img {
@@ -261,12 +298,16 @@ button:hover {
 
 #past-summit1 {
     background: url('../../assets/img/about_2013.png') 0 0 no-repeat;
-    background-size: 100%;
+    background-size: cover;
+    background-color: #ec5242;
+    background-blend-mode: multiply;
 }
 
 #past-summit2 {
     background: url('../../assets/img/about_2011.png') 0 0 no-repeat;
-    background-size: 100%;
+    background-color: #ec5242;
+    background-size: cover;
+    background-blend-mode: multiply;
 }
 
 .past-summit-wrapper {
@@ -276,7 +317,7 @@ button:hover {
 }
 
 .past-summit-card {
-    padding: 17% 0;
+    padding: 10% 0;
     justify-content: center;
     flex-basis: 100%;
 }
@@ -333,14 +374,16 @@ footer div{
     .menu,
     .whole-program,
     .partners-section,
-    .footer {
+    .footer,
+    .upper-menu {
         display: flex;
     }
 
     .mobile-menu,
     .join-btn-wrapper,
     .more-button,
-    .about-partners {
+    .about-partners,
+    .close {
         display: none;
     }
 
@@ -356,6 +399,9 @@ footer div{
     .menu-item {
         width: 15%;
         text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 
     nav {
@@ -368,7 +414,7 @@ footer div{
         padding: 0;
         background: #fff;
         align-items: center;
-        height: 5em;
+        height: 7em;
         width: 100%;
         box-shadow: 0 0 0 5px rgba(233, 233, 233, 0.7);
     }
@@ -391,6 +437,7 @@ footer div{
 
     .main-program {
         width: 100%;
+        font-size: 1em;
     }
 
     .program-card {

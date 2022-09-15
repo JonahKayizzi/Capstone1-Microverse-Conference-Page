@@ -2,19 +2,28 @@ const hambger = document.querySelector('.mobile-menu');
 const menu = document.querySelector('.menu');
 const closebutton = document.querySelector('.close');
 const logo = document.querySelector('.logo');
+const mobileScn = window.matchMedia('(max-width: 768px)');
 
 const openMenu = () => {
-  menu.style.display = 'block';
-  closebutton.style.display = 'block';
-  hambger.style.display = 'none';
-  logo.style.display = 'none';
+  menu.classList.add('blk');
+  menu.classList.remove('hdn');
+ closebutton.classList.add('blk');
+ closebutton.classList.remove('hdn');
+ hambger.classList.add('hdn');
+ hambger.classList.remove('blk');
+ logo.classList.toggle('hdn');
+ logo.classList.remove('blk');
 };
 
 const closeMenu = () => {
-  menu.style.display = 'none';
-  closebutton.style.display = 'none';
-  hambger.style.display = 'block';
-  logo.style.display = 'none';
+  menu.classList.add('hdn');
+  menu.classList.remove('blk');
+  closebutton.classList.add('hdn');
+  closebutton.classList.remove('blk');
+  hambger.classList.add('blk');
+  hambger.classList.remove('hdn');
+  logo.classList.add('hdn');
+  logo.classList.remove('blk');
 };
 
 hambger.addEventListener('click', openMenu);
@@ -22,3 +31,5 @@ hambger.addEventListener('click', openMenu);
 closebutton.addEventListener('click', closeMenu);
 
 menu.addEventListener('click', closeMenu);
+
+
