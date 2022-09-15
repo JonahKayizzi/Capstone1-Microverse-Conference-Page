@@ -2,17 +2,16 @@ const hambger = document.querySelector('.mobile-menu');
 const menu = document.querySelector('.menu');
 const closebutton = document.querySelector('.close');
 const logo = document.querySelector('.logo');
-const mobileScn = window.matchMedia('(max-width: 768px)');
 
 const openMenu = () => {
   menu.classList.add('blk');
   menu.classList.remove('hdn');
- closebutton.classList.add('blk');
- closebutton.classList.remove('hdn');
- hambger.classList.add('hdn');
- hambger.classList.remove('blk');
- logo.classList.toggle('hdn');
- logo.classList.remove('blk');
+  closebutton.classList.add('blk');
+  closebutton.classList.remove('hdn');
+  hambger.classList.add('hdn');
+  hambger.classList.remove('blk');
+  logo.classList.toggle('hdn');
+  logo.classList.remove('blk');
 };
 
 const closeMenu = () => {
@@ -31,5 +30,3 @@ hambger.addEventListener('click', openMenu);
 closebutton.addEventListener('click', closeMenu);
 
 menu.addEventListener('click', closeMenu);
-
-
