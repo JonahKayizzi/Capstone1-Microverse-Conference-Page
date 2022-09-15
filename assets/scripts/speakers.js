@@ -69,15 +69,33 @@ const createElementWithClassAndParent = (newElement, className, id, inHTML, pare
   const speakersHeading = createElementWithClassAndParent('h2','speakers-heading','speakers-heading','Featured Speakers',speakersHeadingContainer);
   const redLine = createElementWithClassAndParent('div','red-line','red-line','',speakersSection)
   const speakersContainer = createElementWithClassAndParent('div','speakers-container flex-col','speakers-container','',speakersSection);
+  const moreButton = createElementWithClassAndParent('button','more-button','more-button','MORE',speakersSection);
+  moreButton.style.backgroundImage = 'url("assets/img/down.png")'
 
-  speakers.forEach((i) => {
-    const speakerContainer = createElementWithClassAndParent('div','speaker-container flex-row','speaker-container','',speakersContainer);
-    const speakerImage = createElementWithClassAndParent('div','speaker-img','speaker-img','',speakerContainer);
-    speakerImage.style.backgroundImage = `${speakers[speakers.indexOf(i)].pic}`;
-    const speakerContentContainer = createElementWithClassAndParent('div','speaker-content-container','speaker-content-container','',speakerContainer);
-    const speakerName = createElementWithClassAndParent('h5','speaker-name','speaker-name',`${speakers[speakers.indexOf(i)].fullname}`,speakerContentContainer);
-    const speakerPosition = createElementWithClassAndParent('p','speaker-position clr-o','speaker-position',`${speakers[speakers.indexOf(i)].position}`,speakerContentContainer);
-    const speakerKeynote = createElementWithClassAndParent('p','speaker-keynote','speaker-keynote',`${speakers[speakers.indexOf(i)].keynote}`,speakerContentContainer);
+  const populateSpeakers = (start, end) => {
+    speakers.slice(start, end).forEach((i) => {
+        const speakerContainer = createElementWithClassAndParent('div','speaker-container flex-row','speaker-container','',speakersContainer);
+        const speakerImage = createElementWithClassAndParent('div','speaker-img','speaker-img','',speakerContainer);
+        speakerImage.style.backgroundImage = `${speakers[speakers.indexOf(i)].pic}`;
+        const speakerContentContainer = createElementWithClassAndParent('div','speaker-content-container','speaker-content-container','',speakerContainer);
+        const speakerName = createElementWithClassAndParent('h5','speaker-name','speaker-name',`${speakers[speakers.indexOf(i)].fullname}`,speakerContentContainer);
+        const speakerPosition = createElementWithClassAndParent('p','speaker-position clr-o','speaker-position',`${speakers[speakers.indexOf(i)].position}`,speakerContentContainer);
+        const speakerKeynote = createElementWithClassAndParent('p','speaker-keynote','speaker-keynote',`${speakers[speakers.indexOf(i)].keynote}`,speakerContentContainer);
+      });
+  };
+
+  let from = 0;
+  let to = 2;
+
+  populateSpeakers(from,to)
+
+  const moreClick = document.querySelector('.more-button');
+
+  moreClick.addEventListener('click', function(){
+    from = 2;
+    to = 6;
+    populateSpeakers(from,to);
+
+    moreButton.style.display = 'none';
   });
 
-  const moreButton = createElementWithClassAndParent('button','more-button','more-button','MORE >',speakersSection);
