@@ -11,7 +11,8 @@
 
 ## Live Demo
 
-[Video Demonstration](https://www.loom.com/share/3ed80fcda3624198bee52c14edca8747)
+[Loom Video Demonstration](https://www.loom.com/share/3ed80fcda3624198bee52c14edca8747)
+
 [Live Demo Link](https://jonahkayizzi.github.io/Capstone1-Microverse-Conference-Page/)
 
 ## Getting Started
