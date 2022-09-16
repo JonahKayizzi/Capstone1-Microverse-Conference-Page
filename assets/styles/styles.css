@@ -436,7 +436,6 @@ footer div {
 
   .main-program {
     width: 100%;
-    font-size: 1em;
   }
 
   .program-card {
@@ -445,7 +444,7 @@ footer div {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 10em;
+    height: 13em;
     text-align: center;
     padding: 10px 0;
     justify-content: space-between;
